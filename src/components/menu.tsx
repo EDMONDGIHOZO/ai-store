@@ -1,23 +1,18 @@
 "use client";
 
-import {MenuItem} from "@/types/Ui.";
-import React, {useState} from "react";
+import React, { useState} from "react";
 import {RiMenu2Line, RiMenu3Fill} from "react-icons/ri";
+import {MenuItems} from "@/constants/menuItems";
 
-interface MenuProps {
-    menu_items: MenuItem[]
-}
-
-const Menu: React.FC<MenuProps> = ({menu_items}) => {
+const Menu = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
-
 
     return (
         <>
             <nav className="relative">
                 {/* Menu Items (Desktop/Tablet) */}
-                <div className="hidden md:flex space-x-4">
-                    {menu_items.map((item, index) => (
+                <div className="hidden md:flex space-x-8">
+                    {MenuItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.url}
@@ -31,7 +26,7 @@ const Menu: React.FC<MenuProps> = ({menu_items}) => {
                 {/* Menu Items (Mobile) */}
                 {isOpen && (
                     <div className="md:hidden absolute top-full right-0 bg-white mt-2 w-48 rounded-md shadow-lg">
-                        {menu_items.map((item, index) => (
+                        {MenuItems.map((item, index) => (
                             <a
                                 key={index}
                                 href={item.url}
