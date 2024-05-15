@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <Wrapper>
             {/*  welcome section */}
-            <section className="lg:p-24 p-12 flex justify-between items-center">
+            <section className="lg:py-24 flex justify-between items-center">
                 <div className="flex flex-col gap-8">
                     <div className="text-4xl font-medium">
                         <h3>Get Best</h3>
@@ -36,9 +36,37 @@ export default function Home() {
                     />
                 </div>
             </section>
-            <hr/>
-            <FeaturedProducts product_type={"Fertilizers"} />
-            <FeaturedProducts product_type={"Seeds"} />
+            <section className={"flex justify-center items-center flex-col"}>
+                <FeaturedProducts product_type={"Fertilizers"}/>
+                <FeaturedProducts product_type={"Seeds"}/>
+            </section>
+
+            <div className={"my-10 bg-green-100 py-20 rounded-2xl"}>
+                <div className={"flex justify-center items-center flex-col lg:flex-row px-10 items-start gap-12 py-10"}>
+                    <Image
+                        className="relative rounded-2xl dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rotate-24"
+                        src="/seeds.png"
+                        alt="Leaves"
+                        width={280}
+                        height={67}
+                        priority
+                    />
+
+                    <div className={"lg:w-5/12"}>
+                        <h3 className={"font-medium text-2xl mb-10"}>Why <span
+                            className={"text-green-400"}>Us</span></h3>
+                        <p>
+                            Choosing our store means choosing quality, reliability, and support
+                            for your farming needs. With a carefully curated selection
+                            of fertilizers and seeds, we ensure that every product meets
+                            the highest standards, empowering you to cultivate thriving crops.
+                            Experience the difference in yield, efficiency,
+                            and sustainability with our trusted solutions.
+                            Join us in nurturing the future of agriculture.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </Wrapper>
     );
 }
