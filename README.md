@@ -1,5 +1,7 @@
 ## Agro-Input store
 
+PREVIEW:  <a href="https://ai-store-beryl.vercel.app/"> here </a>
+
 Application that help farmers to order the fertilizers.
 
 build using NEXTJS
